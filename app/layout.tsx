@@ -27,7 +27,26 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <header
+          style={{
+            padding: "16px",
+            backgroundColor: "#222",
+            color: "#fff",
+            textAlign: "center",
+          }}
+        >
+          <h1>My Website Header</h1>
+        </header>
+        <main style={{ minHeight: "80vh", padding: "20px" }}>{children}</main>
+        <footer
+          style={{
+            padding: "12px",
+            backgroundColor: "#f1f1f1",
+            textAlign: "center",
+          }}
+        >
+          <p>© 2025 My Website. All rights reserved.</p>
+        </footer>
       </body>
     </html>
   );
