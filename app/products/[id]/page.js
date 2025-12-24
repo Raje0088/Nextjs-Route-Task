@@ -1,3 +1,4 @@
+import Photo from '@/component/ProductImage'
 async function getSingleProduct(id) {
     const res = await fetch(`https://dummyjson.com/products/${id}`, {
         next: { revalidate: 3600 }
@@ -33,6 +34,10 @@ export default async function content({ params }) {
                 <a href="/products" className="text-blue-500 hover:underline">
                     ← Back to Products
                 </a>
+            </div>
+            <div>
+
+                <Photo src="/productsImg/globe.svg" alt="Image not found"></Photo>
             </div>
         </div>
     )
